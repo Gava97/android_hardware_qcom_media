@@ -57,7 +57,7 @@ include $(CLEAR_VARS)
 # Common Includes
 libmm-vdec-inc          := $(LOCAL_PATH)/inc
 libmm-vdec-inc          += $(OMX_VIDEO_PATH)/vidc/common/inc
-libmm-vdec-inc          += $(call project-path-for,qcom-media)/$(TARGET_BOARD_PLATFORM)/mm-core/inc
+libmm-vdec-inc          += $(call project-path-for,qcom-media)/mm-core/inc
 #DRM include - Interface which loads the DRM library
 libmm-vdec-inc	        += $(OMX_VIDEO_PATH)/DivxDrmDecrypt/inc
 libmm-vdec-inc          += $(TARGET_OUT_HEADERS)/qcom/display
@@ -71,7 +71,7 @@ libmm-vdec-inc      	+= $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 
 ifeq ($(PLATFORM_SDK_VERSION), 18)  #JB_MR2
 libmm-vdec-def += -DANDROID_JELLYBEAN_MR2=1
-libmm-vdec-inc += $(call project-path-for,qcom-media)/$(TARGET_BOARD_PLATFORM)/libstagefrighthw
+libmm-vdec-inc += $(call project-path-for,qcom-media)/libstagefrighthw
 endif
 
 # Common Dependencies
